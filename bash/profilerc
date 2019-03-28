@@ -1,7 +1,7 @@
 # 
 # sourcing profilerc files installed on system
 #
-for profilerc in $(ls -d ~/.profilerc_*); do
+for profilerc in $(ls -d ~ |grep ^.profilerc_); do
     if [ -d $profilerc ]; then
         for file in $(ls $profilerc); do
             if [ -f $file ]; then
