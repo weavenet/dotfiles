@@ -23,13 +23,14 @@ weavenet's public dotfiles
 
 1. Clone down this repo
 
-```sh
-git clone https://github.com/weavenet/dotfiles dotfiles_weavenet
-```
+    ```sh
+    git clone https://github.com/weavenet/dotfiles dotfiles_weavenet
+    ```
 
 1. Install the default profile.
 
-```sh
-export WORK_DIR=~/work_dir
-mkdir -p $WORK_DIR
-cd dotfiles_weavenet && bashdot install default
+    ```sh
+    export WORK_DIR=~/work_dir
+    mkdir -p $WORK_DIR
+    cd dotfiles_weavenet && bashdot install default
+    ```
