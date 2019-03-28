@@ -32,5 +32,5 @@ weavenet's public dotfiles
     ```sh
     export WORK_DIR=~/work_dir
     mkdir -p $WORK_DIR
-    cd dotfiles_weavenet && bashdot install default
+    bashdot install dotfiles_weavenet
     ```
