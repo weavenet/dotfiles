@@ -1,18 +1,18 @@
 # 
 # sourcing profilerc files installed on system
 #
-for profilerc in $(ls -d ~ |grep ^.profilerc_); do
-    if [ -d $profilerc ]; then
-        for file in $(ls $profilerc); do
+for profilerc in $(ls -a ~ |grep ^.profilerc_); do
+    if [ -d ~/$profilerc ]; then
+        for file in $(ls ~/$profilerc); do
             if [ -f $file ]; then
                 echo "Sourcing profilerc '$file'."
-                source $file
+                source ~/$profilerc/$file
             fi
         done
     fi
 
-    if [ -f $profilerc ]; then
+    if [ -f ~/$profilerc ]; then
         echo "Sourcing profilerc file '$profilerc'."
-        source $profilerc
+        source ~/$profilerc
     fi
 done
