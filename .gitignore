@@ -13,3 +13,5 @@ builds/dotfiles*.tar.gz
 
 **/id_rsa*
 **/known_hosts
+
+**/*.rendered
