@@ -21,28 +21,6 @@ weavenet's public dotfiles
     sudo chmod a+x /usr/local/bin/bashdot
     ```
 
-1. Update your bashrc by running the below command (this will source rc files for profiles):
-
-    ```sh
-    cat >> ~/.bashrc <<EOF
-    #
-    # This bashrc will source files from any profilerc directories
-    # linked into users home.
-    #
-    # Unique configuration for different profiles should be placed
-    # in that profiles respective profilerc directory.
-    #
-    # For example, default will contain the directory .profilerc_default
-    # with any files that should be sourced within it.
-    #
-    if [ -d ~/.profilerc_* ]; then
-      for profilerc in \$(ls -d ~/.profilerc_*/*); do
-          echo "Sourcing profilerc file '\$profilerc'."
-          source \$profilerc
-      done
-    fi
-    EOF
-    ```
 1. Clone down this repo
 
 ```sh
