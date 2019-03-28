@@ -12,6 +12,7 @@ git clone https://github.com/weavenet/dotfiles ~/dotfiles
 
 echo "Installing default profile."
 cd
-bash ~/bashdot install dotfiles
+mkdir ~/work_dir
+env WORK_DIR=~/workdir bash ~/bashdot install dotfiles
 
 echo "Dotfiles installed, run '. ~/.bashrc' to source dotfiles."
