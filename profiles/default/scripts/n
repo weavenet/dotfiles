@@ -1,0 +1,55 @@
+#!/bin/bash
+#
+# Uses ag to search notes
+#
+
+notes_dir=${WORK_DIR}notes
+
+search_string=$1
+target_note=$2
+
+# How many lines before and after the matched line to display
+after=2
+before=2
+
+if [ -z "$search_string" ];then 
+    echo "Search notes in '$notes_dir'."
+    echo "Usage: $0 SEARCH_STRING [TARGET_NOTE]"
+    exit 1
+fi
+
+RED='\033[0;31m'
+NC='\033[0m'
+
+search() {
+    note=$notes_dir/$1
+
+    # Return if note does note exit
+    if [ ! -f $note ]; then
+        echo "Note '$note' does not exist."
+        return 
+    fi
+
+    # Only print output if string exists in note
+    grep -i $search_string $note
+    if [ $? -eq 0 ]; then
+        echo
+        printf "${RED}${note}${NC}\n"
+        ag -A $after -B $before $search_string $note
+    fi
+}
+
+if [ -z $target_note ]; then
+    # If specific note not specified, search all notes
+    for note_to_search in $(notes g $1); do
+        search $note_to_search
+    done
+else
+    # Search specified note
+    # Append .md if not included
+    if [[ $target_note != *.md ]]; then
+        target_note="${target_note}.md"
+    fi
+
+    search $target_note
+fi

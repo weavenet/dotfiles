@@ -1,0 +1,10 @@
+.svn
+*~
+.*.swp
+
+gnupg/gpg-agent.conf
+gnupg/private-keys-v1.d
+gnupg/pubring.gpg*
+gnupg/random_seed
+gnupg/secring.gpg
+gnupg/trustdb.gpg

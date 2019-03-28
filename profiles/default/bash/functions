@@ -1,0 +1,82 @@
+# Tree Grep
+tg () {
+    tree -if | grep --color -v /target/ | grep --color "$@"
+}
+
+java-project() {
+    name=$1
+    artifact=$2
+    
+    if [ "$artifact" == "" ]; then
+        artifact=$name
+    fi
+
+    mvn archetype:generate \
+        -DgroupId=$name \
+        -DartifactId=$artifact \
+        -DarchetypeArtifactId=maven-archetype-quickstart \
+        -DinteractiveMode=false
+}
+
+jqfmt() {
+    file=$1
+
+	if [ -z $file ]; then
+		echo "Usage: jqfm FILENAME"
+		return 1
+	fi
+
+	if [ ! -f $file ]; then
+		echo "File not found '$file'."
+		return 1
+	fi
+
+	tmpfile=`mktemp`
+
+	jq -r . $file > $tmpfile
+    if [ $? -ne 0 ]; then
+        return $?
+    fi
+
+	mv $tmpfile $file
+    if [ $? -ne 0 ]; then
+        return $?
+    fi
+
+	echo "Formatting file '$file' completed."
+}
+
+mux() {
+    tmux has-session -t development
+
+    if [ $? != 0 ]; then
+        tmux new-session -s development -n one -d
+        tmux new-window -n two -t development
+        tmux new-window -n three -t development
+        tmux send-keys -t development:1 'cd ~/code ; clear' C-m
+        tmux send-keys -t development:2 'cd ~/code ; clear' C-m
+        tmux send-keys -t development:3 'cd ~/code ; clear' C-m
+
+        tmux select-window -t development:1
+    fi
+
+    tmux attach -t development
+}
+
+uniqpath() {
+    if [ -n "$PATH" ]; then
+        old_PATH=$PATH:
+        PATH=
+        while [ -n "$old_PATH" ]; do
+            x=${old_PATH%%:*}       # the first remaining entry
+            case $PATH: in
+                *:"$x":*) ;;         # already there
+                *) PATH=$PATH:$x;;    # not there yet
+            esac
+            old_PATH=${old_PATH#*:}
+        done
+        PATH=${PATH#:}
+        unset old_PATH x
+    fi
+}
+

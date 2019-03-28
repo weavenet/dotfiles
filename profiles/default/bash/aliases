@@ -1,0 +1,52 @@
+# ls
+if [ $UNAME == "Darwin" ]; then
+    alias ls="ls -G"
+elif [ $UNAME == "Linux" ]; then
+    alias ls='ls --color=auto'
+fi
+
+# git
+alias gls='git log --pretty=short'
+alias gca='git commit -a'
+alias gpo='git push origin'
+alias gs='git status -sb'
+alias gaa='git ls-files --other --exclude-standard |xargs git add'
+alias gfrom='git fetch -a ; git rebase origin/master'
+
+# AWS
+alias awsc='aws_console | pbcopy'
+
+# Misc
+function c { cd ~/code/$1; }
+alias asg='aws sts get-caller-identity'
+alias dropbox='cd ~/Dropbox'
+alias g='googler'
+alias hgrep='history |grep'
+alias lrc=". ~/.bashrc"
+alias profiles='bashdot profiles'
+alias random="gpg --gen-random --armor 2 16 | tr -cd '[[:alnum:]]._-'"
+alias rm='rm -i'
+alias shs='python -m SimpleHTTPServer 8000'
+
+#
+# Notes
+#
+# Uses https://github.com/pimterry/notes (fork https://github.com/weavenet/notes)
+#
+alias links='notes o links'
+alias lns='notes ls |grep ^quicknote | tail -1 | xargs notes o'
+alias l='n $1 links'
+alias quote='notes cat quotes |gshuf -n1 |cut -b3-100000'
+alias q='quote'
+alias todo='notes open todo'
+
+# Ruby
+alias rake='bundle exec rake'
+
+# Clojure
+alias lrh='lein trampoline repl :headless &'
+
+# Keybase
+alias kbr='keybase chat read --at-least 10'
+alias kbs='keybase chat send'
+alias lsur='keybase chat lsur --at-least 10'

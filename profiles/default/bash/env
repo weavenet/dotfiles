@@ -1,0 +1,2 @@
+# Work dir set on dotfiles installation
+export WORK_DIR=$WORK_DIR

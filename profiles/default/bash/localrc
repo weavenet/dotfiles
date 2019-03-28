@@ -1,0 +1,7 @@
+#
+# Sourceing local configuration for a specific machine, which are not kept in source.
+#
+for localrc in $(ls -a ~/ |grep ^.localrc);do
+    echo "Sourcing localrc file '$localrc'."
+    source ~/$localrc
+done

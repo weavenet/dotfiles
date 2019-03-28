@@ -1,0 +1,15 @@
+**/.netrwhist
+public/vim/.VimballRecord
+public/config/configstore/update-notifier-npm.json
+.dropbox
+**/Icon*
+
+mutt/cache
+public/mutt/cache
+
+**/.DS_Store*
+
+builds/dotfiles*.tar.gz
+
+**/id_rsa*
+**/known_hosts
