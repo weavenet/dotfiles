@@ -1,10 +1,11 @@
 export UNAME=`uname`
 
+source ~/.env
+
 source ~/.bash/aliases
 source ~/.bash/aws
 source ~/.bash/completions
 source ~/.bash/editor
-source ~/.bash/env
 source ~/.bash/functions
 source ~/.bash/golang
 source ~/.bash/path
