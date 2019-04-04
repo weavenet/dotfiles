@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing bashdot as '~/bashdot'."
-url=https://raw.githubusercontent.com/bashdot/bashdot/4.0.1/bashdot
+url=https://raw.githubusercontent.com/bashdot/bashdot/master/bashdot
 curl -s $url > ~/bashdot
 chmod 755 ~/bashdot
 
