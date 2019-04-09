@@ -27,7 +27,7 @@ alias lrc=". ~/.bashrc"
 alias profiles='bashdot profiles'
 alias random="gpg --gen-random --armor 2 16 | tr -cd '[[:alnum:]]._-'"
 alias rm='rm -i'
-alias shell='c ; if [ ! -d shell ]; then git clone https://github.com/weavenet/shell; fi; cd shell ; gfrom ; make shell'
+alias shell='c ; if [ ! -d shell ]; then git clone https://github.com/weavenet/shell; fi; cd shell ; make shell'
 alias shs='python -m SimpleHTTPServer 8000'
 alias workdir='cd $WORK_DIR'
 
@@ -49,7 +49,8 @@ alias rake='bundle exec rake'
 # Clojure
 alias lrh='lein trampoline repl :headless &'
 
-# Keybase
+# Tmp
+## Keybase
 alias kbr='keybase chat read --at-least 10'
 alias kbs='keybase chat send'
 alias lsur='keybase chat lsur --at-least 10'

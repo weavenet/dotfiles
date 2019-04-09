@@ -22,7 +22,7 @@ curl -s https://raw.githubusercontent.com/weavenet/dotfiles/master/install.sh | 
     Manual Installation
 
     ```sh
-    curl -s https://raw.githubusercontent.com/bashdot/bashdot/4.0.1/bashdot > bashdot
+    curl -s https://raw.githubusercontent.com/bashdot/bashdot/master/bashdot > bashdot
     sudo mv bashdot /usr/local/bin
     sudo chmod a+x /usr/local/bin/bashdot
     ```
