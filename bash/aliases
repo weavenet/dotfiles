@@ -19,6 +19,7 @@ alias awsc='aws_console | pbcopy'
 # Misc
 function c { cd ~/code/$1; }
 alias asg='aws sts get-caller-identity'
+alias cpwd='pwd | pbcopy'
 alias dropbox='cd ~/Dropbox'
 alias dotfiles='cd ~/Dropbox/dotfiles'
 alias g='googler'
