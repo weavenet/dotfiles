@@ -28,9 +28,10 @@ alias lrc=". ~/.bashrc"
 alias profiles='bashdot profiles'
 alias random="gpg --gen-random --armor 2 16 | tr -cd '[[:alnum:]]._-'"
 alias rm='rm -i'
-alias shell='c ; if [ ! -d shell ]; then git clone https://github.com/weavenet/shell; fi; cd shell ; make shell'
+alias shell='c ; if [ ! -d shell ]; then git clone https://github.com/weavenet/shell; fi; cd shell ; make local'
 alias shs='python -m SimpleHTTPServer 8000'
 alias workdir='cd $WORK_DIR'
+alias venv3='virtualenv -p python3 venv; source venv/bin/activate; pip3 install -r requirements.txt'
 
 #
 # Notes
@@ -39,7 +40,6 @@ alias workdir='cd $WORK_DIR'
 #
 alias links='notes o links'
 alias lns='notes ls |grep ^quicknote | tail -1 | xargs notes o'
-alias l='n $1 links'
 alias quote='notes cat quotes |gshuf -n1 |cut -b3-100000'
 alias q='quote'
 alias todo='notes open todo'

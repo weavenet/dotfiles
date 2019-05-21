@@ -1,1 +1,1 @@
-export PATH=~/.bin:~/.scripts:$PATH
+export PATH=~/.bin:~/.scripts:~/.local/bin:$PATH

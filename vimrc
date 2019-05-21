@@ -86,3 +86,6 @@ set nowritebackup
 
 " Global macros
 let @r = ":reg\n"
+
+" Don't fold markdown files https://github.com/plasticboy/vim-markdown
+let g:vim_markdown_folding_disabled = 1

@@ -12,4 +12,4 @@
 # NOTES_EXT="txt"
 
 # Define the directory where notes are stored
-NOTES_DIRECTORY=/Users/`whoami`/Dropbox/things/notes
+NOTES_DIRECTORY=`cd ; pwd`/Dropbox/things/notes

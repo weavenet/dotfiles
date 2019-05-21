@@ -3,7 +3,7 @@
 # Uses ag to search notes
 #
 
-notes_dir=${WORK_DIR}/notes
+notes_dir=`cd ; pwd`/Dropbox/things/notes
 
 search_string=$1
 target_note=$2
@@ -31,9 +31,8 @@ search() {
     fi
 
     # Only print output if string exists in note
-    grep -i $search_string $note
+    grep -i $search_string $note > /dev/null 2>&1
     if [ $? -eq 0 ]; then
-        echo
         printf "${RED}${note}${NC}\n"
         ag -A $after -B $before $search_string $note
     fi
