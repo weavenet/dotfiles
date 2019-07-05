@@ -3,7 +3,7 @@
 # Uses ag to search notes
 #
 
-notes_dir=`cd ; pwd`/Dropbox/work_dir/notes
+notes_dir=$WORK_DIR/notes
 
 search_string=$1
 target_note=$2
