@@ -41,6 +41,7 @@ alias venv3='virtualenv -p python3 venv; source venv/bin/activate; pip3 install 
 #
 alias links='notes o links'
 alias lns='notes ls |grep ^quicknote | tail -1 | xargs notes o'
+alias lnsc='notes ls |grep ^quicknote | tail -1 | xargs -I % cat $WORK_DIR/notes/%'
 alias quote='notes cat quotes |gshuf -n1 |cut -b3-100000'
 alias q='quote'
 alias todo='notes open todo'
