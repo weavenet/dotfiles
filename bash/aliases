@@ -22,9 +22,8 @@ alias asg='aws sts get-caller-identity'
 alias box='cd ~/Box'
 alias cpwd='pwd | pbcopy'
 alias dotfiles='cd ~/Box/dotfiles'
-alias dropbox='cd ~/Dropbox'
-alias g='googler'
 alias hgrep='history |grep'
+alias k9-'kill -9'
 alias lrc=". ~/.bashrc"
 alias profiles='bashdot profiles'
 alias random="gpg --gen-random --armor 2 16 | tr -cd '[[:alnum:]]._-'"
