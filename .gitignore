@@ -15,3 +15,5 @@ builds/dotfiles*.tar.gz
 **/known_hosts
 
 **/*.rendered
+
+config/iterm2/*
