@@ -15,6 +15,7 @@ alias gfrom='git fetch -a ; git rebase origin/master'
 
 # AWS
 alias awsc='aws_console | pbcopy'
+alias set_aws_env_from_profile='. ~/.scripts/set_aws_env_from_profile.sh'
 
 # Misc
 function c { cd ~/code/$1; }
