@@ -20,9 +20,7 @@ alias set_aws_env_from_profile='. ~/.scripts/set_aws_env_from_profile.sh'
 # Misc
 function c { cd ~/code/$1; }
 alias asg='aws sts get-caller-identity'
-alias box='cd ~/Box'
 alias cpwd='pwd | pbcopy'
-alias dotfiles='cd ~/Box/dotfiles'
 alias hgrep='history |grep'
 alias k9='kill -9'
 alias lrc=". ~/.bashrc"
@@ -40,20 +38,5 @@ alias venv3='virtualenv -p python3 venv; source venv/bin/activate; pip3 install 
 # Uses https://github.com/pimterry/notes (fork https://github.com/weavenet/notes)
 #
 alias links='notes o links'
-alias lns='notes ls |grep ^quicknote | tail -1 | xargs notes o'
 alias lnsc='notes ls |grep ^quicknote | tail -1 | xargs -I % cat $WORK_DIR/notes/%'
-alias quote='notes cat quotes |gshuf -n1 |cut -b3-100000'
-alias q='quote'
 alias todo='notes open todo'
-
-# Ruby
-alias rake='bundle exec rake'
-
-# Clojure
-alias lrh='lein trampoline repl :headless &'
-
-# Tmp
-## Keybase
-alias kbr='keybase chat read --at-least 10'
-alias kbs='keybase chat send'
-alias lsur='keybase chat lsur --at-least 10'

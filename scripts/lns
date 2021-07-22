@@ -1,0 +1,4 @@
+#!/bin/bash
+
+id=`notes ls |grep ^quicknote | tail -1` 
+notes o $id
