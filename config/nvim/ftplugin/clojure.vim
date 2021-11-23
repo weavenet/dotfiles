@@ -10,8 +10,3 @@ let @t = ":Eval\n:Eval (clojure.test/run-tests)\n"
 let @w = ":set cmdheight=15\n"
 
 let g:rainbow_active = 1
-
-au Syntax * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
