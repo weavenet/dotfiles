@@ -17,3 +17,9 @@ builds/dotfiles*.tar.gz
 **/*.rendered
 
 config/iterm2/*
+
+# Ignore generated test files by CoC
+config/nvim/bundle/coc.nvim/*\ 2
+config/nvim/bundle/coc.nvim/*\ 2.*
+config/nvim/bundle/coc.nvim/**/*\ 2.*
+config/nvim/bundle/coc.nvim/**/*\ 2
