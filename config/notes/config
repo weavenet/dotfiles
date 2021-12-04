@@ -3,7 +3,7 @@
 # This config is case sensitive
 
 # Set the editor that notes are opened with
-# EDITOR=nano
+EDITOR=nvim
 
 # Change the quicknote format to get rid of the word "quicknote"
 # QUICKNOTE_FORMAT="%Y-%m-%d"
