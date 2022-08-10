@@ -1,3 +1,6 @@
+# https://support.apple.com/kb/HT208050
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 export UNAME=`uname`
 
 source ~/.env
