@@ -2,12 +2,6 @@
 
 weavenet's public dotfiles
 
-## Auto Install Script
-
-```
-curl -s https://raw.githubusercontent.com/weavenet/dotfiles/master/install.sh | bash
-```
-
 ## Manual Install
 
 1. Install [bashdot](https://github.com/bashdot/bashdot) on your system:
