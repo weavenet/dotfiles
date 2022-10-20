@@ -19,25 +19,19 @@ alias set_aws_env_from_profile='. ~/.scripts/set_aws_env_from_profile.sh'
 
 # Misc
 function c { cd ~/code/$1; }
-alias asg='aws sts get-caller-identity'
-alias cpwd='pwd | pbcopy'
 alias hgrep='history |grep'
-alias k9='kill -9'
 alias lrc=". ~/.bashrc"
 alias profiles='bashdot profiles'
 alias random="gpg --gen-random --armor 2 16 | tr -cd '[[:alnum:]]._-'"
 alias rm='rm -i'
-alias shell='c ; if [ ! -d shell ]; then git clone https://github.com/weavenet/shell; fi; cd shell ; make local'
 alias shs='python -m SimpleHTTPServer 8000'
 alias workdir='cd $WORK_DIR'
-alias venv3='virtualenv -p python3 venv; source venv/bin/activate; pip3 install -r requirements.txt'
 
 #
 # Notes
 #
 # Uses https://github.com/pimterry/notes (fork https://github.com/weavenet/notes)
 #
-alias links='notes o links'
 alias lnsc='notes ls |grep ^quicknote | tail -1 | xargs -I % cat $WORK_DIR/notes/%'
 alias todo='notes open todo'
 

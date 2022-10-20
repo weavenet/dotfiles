@@ -10,7 +10,6 @@ source ~/.bash/aws
 source ~/.bash/completions
 source ~/.bash/editor
 source ~/.bash/functions
-source ~/.bash/golang
 source ~/.bash/path
 source ~/.bash/prompt
 source ~/.bash/profilerc
