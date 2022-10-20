@@ -1,11 +1,15 @@
+#
 # ls
-if [ $UNAME == "Darwin" ]; then
+#
+if [ `uname` == "Darwin" ]; then
     alias ls="ls -G"
-elif [ $UNAME == "Linux" ]; then
+elif [ `uname` == "Linux" ]; then
     alias ls='ls --color=auto'
 fi
 
+#
 # git
+#
 alias gls='git log --pretty=short'
 alias gca='git commit -a'
 alias gpo='git push origin'
@@ -13,11 +17,15 @@ alias gs='git status -sb'
 alias gaa='git ls-files --other --exclude-standard |xargs git add'
 alias gfrom='git fetch -a ; git rebase origin/master'
 
+#
 # AWS
+#
 alias awsc='aws_console | pbcopy'
 alias set_aws_env_from_profile='. ~/.scripts/set_aws_env_from_profile.sh'
 
+#
 # Misc
+# 
 function c { cd ~/code/$1; }
 alias hgrep='history |grep'
 alias lrc=". ~/.bashrc"
@@ -35,6 +43,7 @@ alias workdir='cd $WORK_DIR'
 alias lnsc='notes ls |grep ^quicknote | tail -1 | xargs -I % cat $WORK_DIR/notes/%'
 alias todo='notes open todo'
 
+#
 # Neo Vim
-alias vi='nvim'
-alias vim='nvim'
+#
+is_bin_in_path nvim && alias vi='nvim' && alias vim='nvim'

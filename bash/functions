@@ -1,49 +1,12 @@
+#
 # Tree Grep
+#
 tg () {
     tree -if | grep --color -v /target/ | grep --color "$@"
 }
 
-java-project() {
-    name=$1
-    artifact=$2
-    
-    if [ "$artifact" == "" ]; then
-        artifact=$name
-    fi
-
-    mvn archetype:generate \
-        -DgroupId=$name \
-        -DartifactId=$artifact \
-        -DarchetypeArtifactId=maven-archetype-quickstart \
-        -DinteractiveMode=false
-}
-
-jqfmt() {
-    file=$1
-
-	if [ -z $file ]; then
-		echo "Usage: jqfm FILENAME"
-		return 1
-	fi
-
-	if [ ! -f $file ]; then
-		echo "File not found '$file'."
-		return 1
-	fi
-
-	tmpfile=`mktemp`
-
-	jq -r . $file > $tmpfile
-    if [ $? -ne 0 ]; then
-        return $?
-    fi
-
-	mv $tmpfile $file
-    if [ $? -ne 0 ]; then
-        return $?
-    fi
-
-	echo "Formatting file '$file' completed."
+function is_bin_in_path {
+    builtin type -P "$1" &> /dev/null
 }
 
 mux() {

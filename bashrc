@@ -1,15 +1,13 @@
 # https://support.apple.com/kb/HT208050
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export UNAME=`uname`
-
+source ~/.bash/functions
 source ~/.env
 
 source ~/.bash/aliases
 source ~/.bash/aws
 source ~/.bash/completions
 source ~/.bash/editor
-source ~/.bash/functions
 source ~/.bash/path
 source ~/.bash/prompt
 source ~/.bash/profilerc
