@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Default number of words
+count=4
+
+if [ -n "$1" ] && [ "$1" -eq "$1" ] 2>/dev/null; then
+    count=$1
+fi
+
+cat /usr/share/dict/words | grep -x '.\{3,5\}' |shuf -n$count | tr '\n' '-' | rev | cut -c 2- | rev | tr '[:upper:]' '[:lower:]'
