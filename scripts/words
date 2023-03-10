@@ -2,9 +2,11 @@
 
 # Default number of words
 count=4
+min_length=3
+max_length=8
 
 if [ -n "$1" ] && [ "$1" -eq "$1" ] 2>/dev/null; then
     count=$1
 fi
 
-cat /usr/share/dict/words | grep -x '.\{3,5\}' |shuf -n$count | tr '\n' '-' | rev | cut -c 2- | rev | tr '[:upper:]' '[:lower:]'
+cat /usr/share/dict/words | grep -x ".\{$min_length,$max_length\}" |shuf -n$count | tr '\n' '-' | rev | cut -c 2- | rev | tr '[:upper:]' '[:lower:]'
