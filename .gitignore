@@ -27,3 +27,6 @@ config/nvim/bundle/coc.nvim/**/*\ 2
 # TODO figure out if these should be ignored
 config/coc/list*
 config/coc/commands
+
+# GitHub Copilot
+config/github-copilot

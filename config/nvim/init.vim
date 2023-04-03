@@ -230,3 +230,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " -- CoC --
+
+" GitHub Copilot
+imap <silent> <C-k> <Plug>(copilot-next)
+imap <silent> <C-l> <Plug>(copilot-previous)
+imap <silent> <C-\> <Plug>(copilot-dismiss)
