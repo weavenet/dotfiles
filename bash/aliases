@@ -24,6 +24,11 @@ alias awsc='aws_console | pbcopy'
 alias set_aws_env_from_profile='. ~/.scripts/set_aws_env_from_profile.sh'
 
 #
+# K8s
+#
+alias k='kubectl'
+
+#
 # Misc
 # 
 function c { cd ~/code/$1; }
