@@ -94,6 +94,8 @@ let @r = ":reg\n"
 let g:vim_markdown_folding_disabled = 1
 
 " GitHub Copilot
-imap <silent> <C-k> <Plug>(copilot-next)
-imap <silent> <C-l> <Plug>(copilot-previous)
-imap <silent> <C-\> <Plug>(copilot-dismiss)
+" imap <silent> <C-k> <Plug>(copilot-next)
+" imap <silent> <C-l> <Plug>(copilot-previous)
+" imap <silent> <C-\> <Plug>(copilot-dismiss)
+
+lua require('user')
