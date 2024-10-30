@@ -1,22 +1,23 @@
+# mutt
+mutt/cache
+public/mutt/cache
+
+# SSH
+builds/dotfiles*.tar.gz
+**/id_rsa*
+**/known_hosts
+
+# Bashdot
+**/*.rendered
+
+# Misc
 **/.netrwhist
 public/vim/.VimballRecord
 public/config/configstore/update-notifier-npm.json
 .dropbox
 **/Icon*
-
-mutt/cache
-public/mutt/cache
-
-**/.DS_Store*
-
-builds/dotfiles*.tar.gz
-
-**/id_rsa*
-**/known_hosts
-
-**/*.rendered
-
 config/iterm2/*
+**/.DS_Store*
 
 # Ignore generated test files by CoC
 config/nvim/bundle/coc.nvim/*\ 2
@@ -30,3 +31,11 @@ config/coc/commands
 
 # GitHub Copilot
 config/github-copilot
+
+# Nvim
+config/nvim/bundle/node_modules/
+config/nvim/bundle/yarn.lock
+config/nvim/pack
+
+# TMUX
+**/tmux*.log
