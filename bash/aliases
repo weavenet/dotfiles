@@ -35,7 +35,7 @@ function c { cd ~/code/$1; }
 alias hgrep='history |grep'
 alias lrc=". ~/.bashrc"
 alias profiles='bashdot profiles'
-alias random="gpg --gen-random --armor 2 8 | tr -cd '[[:alnum:]]._-' | sed 's/\(.\{3\}\)/\1-/g'"
+alias random="gpg --gen-random --armor 2 8 | tr -cd '[[:alnum:]]._-' | sed 's/\(.\{4\}\)/\1-/g'"
 alias rm='rm -i'
 alias shs='python -m SimpleHTTPServer 8000'
 alias workdir='cd $WORK_DIR'
