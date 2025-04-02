@@ -34,6 +34,7 @@ alias k='kubectl'
 function c { cd ~/code/$1; }
 alias hgrep='history |grep'
 alias lrc=". ~/.bashrc"
+alias mop='env TERM=screen-256color mop'
 alias profiles='bashdot profiles'
 alias random="gpg --gen-random --armor 2 8 | tr -cd '[[:alnum:]]._-' | sed 's/\(.\{4\}\)/\1-/g'"
 alias rm='rm -i'
