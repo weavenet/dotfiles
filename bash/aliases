@@ -48,8 +48,3 @@ alias workdir='cd $WORK_DIR'
 #
 alias lnsc='notes ls |grep ^quicknote | tail -1 | xargs -I % cat $WORK_DIR/notes/%'
 alias todo='notes open todo'
-
-#
-# Neo Vim
-#
-is_bin_in_path nvim && alias vi='nvim' && alias vim='nvim'
