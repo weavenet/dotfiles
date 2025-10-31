@@ -3,7 +3,6 @@ font-feature = -calt
 font-feature = -dlig
 font-feature = -liga
 font-size = 16
-macos-titlebar-style = hidden
 shell-integration-features = no-cursor
 theme = Bright Lights
 copy-on-select = clipboard

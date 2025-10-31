@@ -78,24 +78,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-if has('nvim')
-else
-    " Stronger encryption
-    set cm=blowfish2
-    set viminfo=
-    set nobackup
-    set nowritebackup
-endif
+" Stronger encryption
+set cm=blowfish2
+set viminfo=
+set nobackup
+set nowritebackup
 
 " Global macros
 let @r = ":reg\n"
 
 " Don't fold markdown files https://github.com/plasticboy/vim-markdown
 let g:vim_markdown_folding_disabled = 1
-
-" GitHub Copilot
-" imap <silent> <C-k> <Plug>(copilot-next)
-" imap <silent> <C-l> <Plug>(copilot-previous)
-" imap <silent> <C-\> <Plug>(copilot-dismiss)
-
-lua require('user')
